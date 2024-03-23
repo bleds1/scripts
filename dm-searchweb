@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Defining our web browser.
+DMBROWSER="qutebrowser"
+
+# An array of search engines.
+declare -a options=(
+    "Amazon - https://www.amazon.co.uk/s?k="
+    "Brave - https://search.brave.com/search?q="
+    "Archwiki - https://wiki.archlinux.org/index.php?search="
+    "Thesaurus - https://www.thesaurus.com/misspelling?term="
+    "Wikipedia - https://en.wikipedia.org/wiki/"
+    "Youtube - https://www.youtube.com/results?search_query="
+    "Quit"
+)
+
+# Picking a search engine.
+engine=$(printf '%s\n' "${options[@]}" | dmenu -i -l 20 -p 'Choose search engine ' | awk '{print $1}')
+[ "$engine" == "Quit" ] && exit
+
+# Searching the chosen engine.
+query=$(echo "" | dmenu -p "Searching $engine ")
+[ -z "$query" ] && exit
+
+# Display search results in web browser
+$DMBROWSER "$(echo "$engine" | awk '{print $NF}')""$query"

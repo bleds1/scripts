@@ -1,7 +1,7 @@
 #!/bin/bash
 # Lists regularly used bookmarks in Rofi and opens them in the browser.
 
-myTerm=wezterm
+myTerm=st
 myEdit=neovim
 myBrowser=qutebrowser
 
