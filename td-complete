@@ -1,0 +1,3 @@
+#!/bin/bash
+# Shows today's completed taskwarrior tasks in a a rofi pop up
+task end.after:yesterday completed | rofi -dmenu

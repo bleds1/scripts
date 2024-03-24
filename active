@@ -1,0 +1,3 @@
+#!/bin/sh
+# Displays active taskwarrior tasks in a rofi pop up
+task active | rofi -dmenu

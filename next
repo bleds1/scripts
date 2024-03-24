@@ -1,0 +1,3 @@
+#!/bin/sh
+# Displays taskwarrior tasks from project:Next in a rofi pop up
+task project:Next | rofi -dmenu
