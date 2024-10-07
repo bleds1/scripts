@@ -1,2 +1,2 @@
 #!/bin/sh
-scrot ~/Pictures/%Y%m%d%H%M-screenshot.png
+scrot ~/Pictures/screengrab/%Y%m%d%H%M-screenshot.png
