@@ -14,7 +14,9 @@ for word in "${@:2}"; do
 done
 
 if [ ! -e "$name.md" ]; then
-    echo -e "$content\nID: $(date +"%Y%m%d%H%M")\ntags: #fleeting\n" > "$name.md"
+    echo -e "$content\n" > "$name.md"
 fi
+
+# nvim -n "$name.md"
 
 emacsclient -c -a emacs -n "$name.md"
