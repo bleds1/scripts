@@ -1,8 +1,0 @@
-#!/bin/bash
-# This script searches my Zettelkasten/Obsidian vault/pages with fzf and opens the file for editing in Neovim
-
-zet="/home/bledley/vault/"
-
-menu=$(ls -a "$zet" | uniq -u | fzf --height=100% --reverse --header-first)
-
-nvim "$zet"/"$menu"

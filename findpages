@@ -1,0 +1,9 @@
+#!/bin/bash
+# Terminal command for search zk Pages and edit on selection
+
+zet="/home/bledley/Documents/zk/Pages/"
+
+menu=$(ls -a "$zet" | uniq -u | fzf --height=100% --reverse --header-first)
+
+# nvim "$zet"/"$menu"
+emacsclient -c -a emacs -n "$zet"/"$menu"
