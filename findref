@@ -5,5 +5,5 @@ zet="/home/bledley/Documents/zk/Reference/"
 
 menu=$(ls -a "$zet" | uniq -u | fzf --height=100% --reverse --header-first)
 
-# nvim "$zet"/"$menu"
-emacsclient -c -a emacs -n "$zet"/"$menu"
+nvim "$zet"/"$menu"
+# emacsclient -c -a emacs -n "$zet"/"$menu"
