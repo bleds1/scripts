@@ -8,7 +8,7 @@ ZROOT=${ZET_ROOT:=~/org/roam/fleeting/}
 title=""
 read -p "Enter a title: " title
 name="$ZROOT/$(date +"%Y%m%d%H%M")-$(echo "$title" | tr ' ' '-')"
-content="#+title: $title \n#+filetags: :fleeting:\n"
+content="#+title: $title \n#+filetags: fleeting\n"
 for word in "${@:2}"; do
   name+="--$word"
   content+=" ${word^}"

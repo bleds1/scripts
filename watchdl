@@ -1,7 +1,7 @@
 #!/bin/bash
 # Search my downloads directory for videos to launch with MPV
 
-watch="/home/bledley/Downloads"
+watch="/home/bledley/Downloads/watch-list"
 
 menu=$(ls -a "$watch" | uniq -u | fzf --height=100% --reverse --header-first)
 
