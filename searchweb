@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Rofi Web searcher modified from a script original by Distrotube
+# Rofi Web searcher modified from a script originally by Distrotube
 #
 # Define web browser.
 DMBROWSER="firefox"
