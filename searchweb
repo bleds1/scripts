@@ -1,28 +1,21 @@
 #!/usr/bin/env bash
-# Rofi Web searcher modified from a script by Distrotube
+# Rofi Web searcher modified from a script original by Distrotube
 #
-# Defining our web browser.
+# Define web browser.
 DMBROWSER="firefox"
 
-# An array of search engines.  You can edit this list to add/remove
-# search engines. The format must be: "engine_name - url".
+# Search engines. Format must be: "engine_name - url".
 # The url format must allow for the search keywords at the end of the url.
-# For example: https://www.amazon.com/s?k=XXXX searches Amazon for 'XXXX'.
 declare -a options=(
 "Google - https://www.google.com/search?q="
+"4get - https://4get.ca/web?s="
 "Archwiki - https://wiki.archlinux.org/index.php?search="
 "Github - https://github.com/search?q="
+"Letterboxd - https://letterboxd.com/search/"
+"Reddit - https://www.reddit.com/search/?q="
 "Wikipedia - https://en.wikipedia.org/wiki/"
 "Youtube - https://www.youtube.com/results?search_query="
-#"Gitlab - https://gitlab.com/search?search="
-"Brave - https://search.brave.com/search?q="
-# "IMDB - https://www.imdb.com/find?q="
-"Reddit - https://www.reddit.com/search/?q="
-# "Stack - https://stackoverflow.com/search?q="
-# "Startpage - https://www.startpage.com/do/dsearch?query="
-# TODO: make Thesaurus search work correctly
-# "Thesaurus - https://www.thesaurus.com/misspelling?term="
-# "Urban - https://www.urbandictionary.com/define.php?term="
+
 "Quit"
 )
 
