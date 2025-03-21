@@ -7,5 +7,5 @@
 # kitty --name="__text_scratchpad" -e $SHELL -lc "sleep 0.1 && nvim -c startinsert -c 'setlocal spell' ${tmp_file}" && xclip -selection clipboard < $tmp_file
 
 tmp_file=$(mktemp)
-st -e nvim ${tmp_file} && xclip -selection clipboard < $tmp_file
+foot -e nvim ${tmp_file} && xclip -selection clipboard < $tmp_file
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 # Lists regularly used bookmarks in Rofi and opens them in the browser.
 
-myTerm=st
-myEdit=neovim
-myBrowser=qutebrowser
+myTerm=foot
+myEdit=nvim
+myBrowser=firefox
 
 menu(){
     printf "1. BBC Scores & Fixtures (sc)\n"

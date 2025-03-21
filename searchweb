@@ -16,7 +16,6 @@ declare -a options=(
 "Reddit - https://www.reddit.com/search/?q="
 "Wikipedia - https://en.wikipedia.org/wiki/"
 "Youtube - https://www.youtube.com/results?search_query="
-
 "Quit"
 )
 

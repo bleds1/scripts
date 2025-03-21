@@ -1,7 +1,7 @@
 #!/bin/bash
 
-myTerm=kitty
-myEdit=vim
+myTerm=foot
+myEdit=nvim
 
 menu(){
     printf "0. dotfiles\n"
