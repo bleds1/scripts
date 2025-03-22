@@ -2,7 +2,8 @@
 # Rofi Web searcher modified from a script originally by Distrotube
 #
 # Define web browser.
-DMBROWSER="firefox"
+# DMBROWSER="firefox"
+DMBROWSER="brave"
 
 # Search engines. Format must be: "engine_name - url".
 # The url format must allow for the search keywords at the end of the url.
