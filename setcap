@@ -1,7 +1,0 @@
-#!/bin/sh
-# script for running the set caps to escape key manually
-# 
-setxkbmap -option caps:escape
-
-
-
