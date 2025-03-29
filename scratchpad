@@ -1,11 +1,16 @@
 #!/bin/bash
-# Can't remember where I found this but very useful. Keybind this script and a Vim scratchpad will pop up anywhere. Write and quit and the text is copied to register to be pasted in web browser or any other text entry box. A poor mans Vim-everywhere.
-
-## Commented was the original command. This stopped working recently..the edited below works mostly as expected.
-
-# tmp_file=$(mktemp)
-# kitty --name="__text_scratchpad" -e $SHELL -lc "sleep 0.1 && nvim -c startinsert -c 'setlocal spell' ${tmp_file}" && xclip -selection clipboard < $tmp_file
+# Keybind this script and a Vim scratchpad will pop up anywhere. Write and quit and the text is copied to clipboard to be pasted elsewhere. A poor mans Vim-everywhere. Relies on wayland clipboard & nerdfonts and will give notifications and sound effect on successfully copied.
 
 tmp_file=$(mktemp)
-foot -e nvim ${tmp_file} && xclip -selection clipboard < $tmp_file
+
+if footclient -e nvim -c "startinsert" "$tmp_file"; then
+  if wl-copy < "$tmp_file"; then
+    notify-send "  Text copied to clipboard."
+    paplay ~/sfx/me-too.ogg # Replace with your sound file
+  else
+    notify-send "󱘝  Error: Failed to copy text to clipboard."
+  fi
+  else
+    notify-send "󰅚  Error: Neovim session failed."
+fi
 

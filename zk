@@ -1,25 +1,21 @@
 #! /usr/bin/env bash
-# stole and re-adapted this script from https://dpitt.me/blog/2020/03/zettelkasten/
-# creates a new fleeting note in my inbox with appropriate time stamping in the file name. It prompts for a title and makes a markdown file that combines date and title. The 'content' section allows for a set template or format for the note - This example is super minimal just a h1 header and blank space to write. This uses emacsclient as the editor but comment out and uncomment nvim line to that instead.
+# Creates a new fleeting note in my inbox with appropriate time stamping in the file name 
 
 set -e
 
 ZROOT=${ZET_ROOT:=~/org/roam/fleeting/}
-title=""
-read -p "Enter a title: " title
-name="$ZROOT/$(date +"%Y%m%d%H%M")-$(echo "$title" | tr ' ' '-')"
+timestamp=$(date +"%Y%m%d%H%M")
+title="$timestamp" # Use timestamp as title
+name="$ZROOT/$timestamp"
 content="#+title: $title \n#+filetags: fleeting\n"
-for word in "${@:2}"; do
-  name+="--$word"
-  content+=" ${word^}"
+
+for word in "${@:1}"; do # changed to start at 1 to include all arguments.
+    name+="--$word"
+    content+=" ${word^}"
 done
 
 if [ ! -e "$name.org" ]; then
     echo -e "$content\n" > "$name.org"
 fi
 
-# nvim -n "$name.org"
-
-# zeditor "$name.org"
-
-emacsclient -c -a -n "$name.org"
+footclient -e nvim -n "$name.org"
