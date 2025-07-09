@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-hyprshade on ~/.config/hyprshade/grayscale.glsl
+hyprshade on ~/.config/hyprshade/blue-light-filter.glsl

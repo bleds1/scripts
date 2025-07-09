@@ -2,21 +2,23 @@
 # Rofi Web searcher modified from a script originally by Distrotube
 #
 # Define web browser.
-# DMBROWSER="firefox"
-DMBROWSER="brave"
+DMBROWSER="qutebrowser"
+# DMBROWSER="librewolf"
+# DMBROWSER="brave"
 
 # Search engines. Format must be: "engine_name - url".
 # The url format must allow for the search keywords at the end of the url.
 declare -a options=(
-"Google - https://www.google.com/search?q="
-"4get - https://4get.ca/web?s="
+"Duckduckgo - https://duckduckgo.com/?q="
+# "Google - https://www.google.com/search?q="
+# "4get - https://4get.ca/web?s="
 "Archwiki - https://wiki.archlinux.org/index.php?search="
 "AUR - https://aur.archlinux.org/packages?O=0&K="
 "Github - https://github.com/search?q="
 "Letterboxd - https://letterboxd.com/search/"
-"Reddit - https://www.reddit.com/search/?q="
+# "Reddit - https://www.reddit.com/search/?q="
 "Wikipedia - https://en.wikipedia.org/wiki/"
-"Youtube - https://www.youtube.com/results?search_query="
+# "Youtube - https://www.youtube.com/results?search_query="
 "Quit"
 )
 
